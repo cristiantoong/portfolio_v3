@@ -31,10 +31,13 @@ const projects = [
 // load items
 window.addEventListener('DOMContentLoaded', function(){
     displayProjects();
+
+    //displayFilteredProjects(projects);
     
-    });
+});
 
 const cards = document.getElementById('cards');
+const filterBtns = document.querySelector('#filter-btns');
 
 function displayProjects(){
     let i = 0;
@@ -46,6 +49,20 @@ function displayProjects(){
         `;
         i++;
     }
+}
+
+//another way to display objects in html
+function displayFilteredProjects(menuItems){
+    let displayProject = menuItems.map(function(project){
+        return `
+        <div class="projects__card" id="card">
+        <img src="${projects.img}" alt="${projects.alt}">
+        </div> 
+    `;
+    });
+
+    displayProject = displayProject.join("");
+    cards.innerHTML = displayProject;
 }
 
 

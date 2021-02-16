@@ -5,6 +5,7 @@
     &__title{
         text-align: center;
         padding: 80px 0;
+        @include gradient-4;
     }
 
     &__container {
@@ -15,6 +16,25 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         grid-row-gap: 30px;
+    }
+
+    &__filter-btns {
+        text-align: center;
+        margin-bottom: 80px;
+        
+    }
+
+    &__filter-btn {
+        background: transparent;
+        color: $white;
+        font-size: 1.2rem;
+        outline: none;
+        border: none;
+        border: 5px solid $white;
+        padding: 20px 30px;
+        margin-right: 40px;
+        cursor: pointer;
+        
     }
 
     &__card {
