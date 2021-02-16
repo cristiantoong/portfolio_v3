@@ -84,3 +84,24 @@ $breakpoints-down: ("small": "39.9375em","medium": "63.9375em", "large": "87.437
     font-size: 2.5rem;
 }
 
+
+// Animation
+@mixin keyframes($animation-name) {
+    @keyframes #{$animation-name} {
+    @content;
+    }
+}
+
+@mixin animation($str) {
+    animation: #{$str};      
+}
+
+@include keyframes(fadeIn) {
+    to{ opacity: 1; }
+    from { opacity: 0; }
+}
+
+@include keyframes(fadeOut) {
+    to{ opacity: 0; }
+    from { opacity: 1; }
+}

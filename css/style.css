@@ -1,4 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -392,7 +427,6 @@ a {
 
 .projects__filter-btns {
   text-align: center;
-  margin-bottom: 80px;
 }
 
 .projects__filter-btn {
@@ -405,6 +439,7 @@ a {
   padding: 20px 30px;
   margin-right: 40px;
   cursor: pointer;
+  margin-bottom: 80px;
 }
 
 .projects__card {
@@ -425,5 +460,227 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 4px;
+}
+
+#modal {
+  background: #000000;
+  background: #303030f8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+  z-index: 999;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#modal .modal-content {
+  color: #fff;
+  background: rgba(0, 0, 0, 0);
+  padding: 3em 0;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 850px;
+  height: 100vh;
+}
+
+#modal .modal-content .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 8rem;
+}
+
+#modal .modal-content .project .left-info {
+  width: 350px;
+  height: 250px;
+}
+
+#modal .modal-content .project .left-info img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+#modal .modal-content .project .right-info {
+  width: 350px;
+  height: 250px;
+}
+
+#modal .modal-content .project .right-info h2 {
+  margin-bottom: 1em;
+}
+
+#modal .modal-content .project .right-info .technologies {
+  margin-bottom: 2.4em;
+}
+
+#modal .modal-content .project .right-info .technologies h4 {
+  font-weight: 600;
+}
+
+#modal .modal-content .project .right-info .technologies p {
+  font-weight: 300;
+}
+
+#modal .modal-content .project .right-info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#modal .modal-content .project .right-info ul li {
+  margin-right: 1em;
+  list-style-type: none;
+}
+
+#modal .modal-content .project .right-info ul li a {
+  color: #fff;
+  text-decoration: none;
+  border: 0.5px solid #ffffff;
+  border-radius: 3px;
+  padding: .5em 1em;
+}
+
+#modal .modal-content .mockup {
+  width: 800px;
+  height: 500px;
+}
+
+#modal .modal-content .mockup img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#modal .prev-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  z-index: 101;
+}
+
+#modal .next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: 78%;
+}
+
+#modal .exit-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 3%;
+  right: 1%;
+}
+
+.modals {
+  display: none;
+}
+
+.modals .modal .project-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.modals .modal .project-1 .left-info {
+  width: 350px;
+  height: 250px;
+}
+
+.modals .modal .project-1 .left-info img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modals .modal .project-1 .right-info {
+  width: 350px;
+  height: 250px;
+}
+
+.modals .modal .project-1 .right-info h2 {
+  margin-bottom: 1em;
+}
+
+.modals .modal .project-1 .right-info .technologies {
+  margin-bottom: 2.4em;
+}
+
+.modals .modal .project-1 .right-info .technologies h4 {
+  font-weight: 600;
+}
+
+.modals .modal .project-1 .right-info .technologies p {
+  font-weight: 300;
+}
+
+.modals .modal .project-1 .right-info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modals .modal .project-1 .right-info ul li {
+  margin-right: 1em;
+  list-style-type: none;
+}
+
+.modals .modal .project-1 .right-info ul li a {
+  color: #fff;
+  text-decoration: none;
+  border: 0.5px solid #ffffff;
+  border-radius: 3px;
+  padding: .5em 1em;
+}
+
+.modals .modal .mockup {
+  width: 800px;
+  height: 500px;
+}
+
+.modals .modal .mockup img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.animateShow {
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+}
+
+.btnFadeIn {
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+}
+
+.btnFadeOut {
+  -webkit-animation: fadeOut 0.3s ease-in-out;
+          animation: fadeOut 0.3s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
