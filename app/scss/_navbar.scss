@@ -41,6 +41,7 @@
 
     &__item {
         height: 100%;
+        cursor: pointer;
 
     }
     
@@ -53,6 +54,7 @@
         text-decoration: none;
         height: 100%;
         transition: all 0.3s ease;
+        
 
         &:hover {
             color: $purple;
