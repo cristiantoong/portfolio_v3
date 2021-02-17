@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     //displayProjects2(projects);
 
-    modal();
+    //modal();
 
     // const categories = projects.map(function(project){
     //     return project.category
@@ -261,4 +261,4 @@ function modal(){
     })
 }
 
-modal();
+//modal();
