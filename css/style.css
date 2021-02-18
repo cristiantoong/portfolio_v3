@@ -1031,6 +1031,7 @@ a {
 }
 
 .about {
+  min-height: 80vh;
   background: #131313;
 }
 
@@ -1050,9 +1051,12 @@ a {
 .about__title {
   text-align: center;
   padding: 80px 0;
-  background-color: #ff8177;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff0844), to(#ffb199));
-  background-image: linear-gradient(to right, #ff0844 0%, #ffb199 100%);
+  background: #11998e;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#38ef7d), to(#11998e));
+  background: linear-gradient(to right, #38ef7d, #11998e);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -1062,8 +1066,17 @@ a {
 }
 
 .about__img {
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.about__img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .about__img img {
@@ -1105,7 +1118,7 @@ a {
 }
 
 .about__info .accordion-content p:last-child {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .about__info .accordion-content p {
