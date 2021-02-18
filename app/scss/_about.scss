@@ -92,9 +92,56 @@
 
 
 //MEDIA QUERY
-// @media screen and (max-width: 960px) {
+@media screen and (max-width: 1160px) {
+    .about {
+        min-height: 80vh;
+        background: $blackGray;
     
-// }
+    
+        &__container {
+            flex-direction: column;
+        }
+        
+        &__img {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 80px;
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        min-height: 80vh;
+        background: $blackGray;
+    
+    
+        &__container {
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        &__img {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 80px;
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+
+        &__info {
+            width: 100%;
+        }
+    
+        
+    }
+}
 
 // @media screen and (max-width: 768px){
     

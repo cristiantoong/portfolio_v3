@@ -1129,4 +1129,52 @@ a {
 .about .resume-link {
   color: #9518fc;
 }
+
+@media screen and (max-width: 1160px) {
+  .about {
+    min-height: 80vh;
+    background: #131313;
+  }
+  .about__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 80px;
+  }
+  .about__img:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    min-height: 80vh;
+    background: #131313;
+  }
+  .about__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .about__img {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 80px;
+  }
+  .about__img:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+  .about__info {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
