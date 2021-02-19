@@ -1,3 +1,11 @@
+
+// get curreny year
+const currentDate = new Date;
+const year = document.getElementById('year');
+year.innerHTML = currentDate.getFullYear();
+
+
+
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
 
@@ -56,3 +64,40 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu)
 navLogo.addEventListener('click', hideMobileMenu)
+
+
+
+// Scroll To Top
+const btnScrollTop = document.querySelector(".scrollToTop");
+
+btnScrollTop.addEventListener('click', function(){
+    // window.scrollTo(0, 0);
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+});
+
+
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction() {
+  if (window.pageYOffset > 300) { // Show backToTopButton
+    btnScrollTop.classList.remove("btnFadeOut");
+    btnScrollTop.classList.add("btnFadeIn");
+    btnScrollTop.style.transition = 'all 0.3s ease'
+    btnScrollTop.style.display = "block";
+
+}
+else { // Hide backToTopButton
+    setTimeout(function() {
+        btnScrollTop.classList.remove("btnFadeIn");
+        btnScrollTop.classList.add("btnFadeOut");
+        btnScrollTop.style.transition = 'all 0.3s ease'
+        btnScrollTop.style.display = "none";
+    }, 250);
+
+}
+}
