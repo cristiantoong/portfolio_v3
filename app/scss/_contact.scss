@@ -7,7 +7,8 @@
         text-align: center;
         padding: 80px 0;
         font-size: 2.5rem;
-        @include gradient-1;
+        @include gradient-3;
+        font-size: 2.5rem;
     }
 
     &__form {
@@ -67,7 +68,7 @@
             border: 2px solid $white;
             background: $blackGray;
             color: $white;
-            font-size: 1rem;
+            font-size: $font-med;
             cursor: pointer;
         }
     }
