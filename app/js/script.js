@@ -11,7 +11,7 @@ const menuLinks = document.querySelector('.navbar__menu');
 const navLogo = document.querySelector('.navbar__logo')
 
 // Display Mobile Menu
-const mobileMenu = function() {
+const mobileMenu = () => {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
 }
@@ -20,13 +20,13 @@ const mobileMenu = function() {
 menu.addEventListener('click', mobileMenu);
 
 // Show active menu when scrolling
-const highlightMenu = function() {
+const highlightMenu = () => {
     const elem = document.querySelector('.highlight');
     const homeMenu = document.querySelector('#home-page');
     const projectsMenu = document.querySelector('#projects-page');
     const aboutMenu = document.querySelector('#about-page');
     let scrollPos = window.scrollY;
-    console.log(scrollPos)
+    //console.log(scrollPos);
 
     // adds 'highlight' class to my menu items
     // if width is for desktop
@@ -50,9 +50,7 @@ const highlightMenu = function() {
     }
 
 }
-// let scrollPos = window.scrollY;
-// const test = document.querySelector('#test');
-// test.innerHTML = scrollPos;
+
 
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
@@ -61,9 +59,9 @@ window.addEventListener('click', highlightMenu);
 
 
 // Close mobile Menu when clicking on a menu item
-const hideMobileMenu = function() {
+const hideMobileMenu = () => {
     const menuBars = document.querySelector('.is-active');
-    if(window.innerWidth <= 768 && menuBars) {
+    if(window.innerWidth <= 960 && menuBars) {
         menu.classList.toggle('is-active');
         menuLinks.classList.remove('active');
     }
@@ -97,8 +95,7 @@ function scrollFunction() {
     btnScrollTop.style.transition = 'all 0.3s ease'
     btnScrollTop.style.display = "block";
 
-}
-else { // Hide backToTopButton
+} else { // Hide backToTopButton
     setTimeout(function() {
         btnScrollTop.classList.remove("btnFadeIn");
         btnScrollTop.classList.add("btnFadeOut");
@@ -106,5 +103,5 @@ else { // Hide backToTopButton
         btnScrollTop.style.display = "none";
     }, 250);
 
-}
+    }
 }

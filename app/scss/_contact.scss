@@ -72,6 +72,13 @@
             cursor: pointer;
         }
     }
+
+    #error {
+        margin-top: 2rem;
+        @include gradient-1;
+    }
+
+
 }
 
 
